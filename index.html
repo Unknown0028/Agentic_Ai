@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Mohanasundaram S</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0e7ff 0%, #f0fdfa 100%);
+      color: #22223b;
+      min-height: 100vh;
+    }
+    .hero {
+      background: linear-gradient(120deg, #1e3a8a 60%, #38bdf8 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 24px rgba(30,58,138,0.2);
+      background: #fff;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+      animation: fadeInDown 1s;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin: 0.7rem 0 1.2rem 0;
+      font-weight: 400;
+      animation: fadeInUp 1.2s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav {
+      margin-top: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.2s, border-bottom 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+    }
+    nav a:hover {
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
+    }
+    section {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 2rem 1.5rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(30,58,138,0.08);
+      animation: fadeInUp 1.2s;
+    }
+    h2 {
+      color: #1e3a8a;
+      border-bottom: 2px solid #e0e7ff;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.2rem;
+      font-size: 1.7rem;
+      letter-spacing: 0.5px;
+    }
+    ul { list-style: none; padding: 0; }
+    ul li { margin-bottom: 0.7rem; }
+    .timeline {
+      position: relative;
+      margin-left: 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid #38bdf8;
+    }
+    .timeline li {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .timeline li:before {
+      content: '\f111';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: #38bdf8;
+      position: absolute;
+      left: -2.1rem;
+      top: 0.1rem;
+      font-size: 0.8rem;
+    }
+    .projects-list li {
+      background: linear-gradient(90deg, #e0e7ff 60%, #f0fdfa 100%);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 8px rgba(56,189,248,0.07);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .projects-list li:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 6px 24px rgba(30,58,138,0.13);
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1rem 0 0 0;
+    }
+    .skills-list span {
+      display: flex;
+      align-items: center;
+      background: #e0e7ff;
+      color: #1e3a8a;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      gap: 0.6rem;
+      box-shadow: 0 1px 4px rgba(30,58,138,0.07);
+    }
+    .contact a {
+      color: #1e3a8a;
+      text-decoration: none;
+      margin-right: 18px;
+      font-size: 1.3rem;
+      transition: color 0.2s;
+    }
+    .contact a:hover {
+      color: #38bdf8;
+    }
+    .contact i {
+      margin-right: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 2.5rem;
+      background: linear-gradient(90deg, #1e3a8a 60%, #38bdf8 100%);
+      color: white;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      section { padding: 1rem 0.5rem; }
+      .skills-list { flex-direction: column; gap: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="hero">
+    <img src="https://avatars.githubusercontent.com/u/111111111?v=4" alt="Profile" class="hero-img" onerror="this.src='https://ui-avatars.com/api/?name=Mohanasundaram+S&background=1e3a8a&color=fff&size=120'">
+    <h1>Mohanasundaram S</h1>
+    <p><span id="typed"></span></p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a B.E. Computer Science (AI & ML) student at Sri Eshwar College of Engineering, passionate about building intelligent solutions and creative software. I love exploring new technologies, participating in hackathons, and solving real-world problems through code and innovation.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="timeline">
+      <li><strong>Sri Eshwar College of Engineering</strong> – B.E. CSE (AI & ML), CGPA 7.9 (Up to 6th Sem), 2022–2026</li>
+      <li><strong>Senthil Matric Hr. Sec. School</strong> – HSC 93.6%, 2020–2022</li>
+      <li><strong>Wisdomland Matriculation School</strong> – SSLC 87.2%, 2019–2020</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="projects-list">
+      <li>
+        <strong>DataMasker (2023)</strong> <br>
+        <span style="color:#38bdf8"><i class="fa-solid fa-shield-halved"></i></span>
+        A Python module + Streamlit app for anonymizing PII and generating synthetic datasets.<br>
+        <em>Tech: Python, Pandas, Regex, Faker, Streamlit</em>
+      </li>
+      <li>
+        <strong>Offline Personal AI Assistant (2024)</strong> <br>
+        <span style="color:#38bdf8"><i class="fa-solid fa-robot"></i></span>
+        Voice-controlled AI assistant with speech recognition and NLP for offline system automation.<br>
+        <em>Tech: Python, Vosk, Pyttsx3, Psutil, Pyautogui</em>
+      </li>
+      <li>
+        <strong>Motion-Controlled Game (2025)</strong> <br>
+        <span style="color:#38bdf8"><i class="fa-solid fa-gamepad"></i></span>
+        A webcam-based game controlled by body gestures using OpenCV and Mediapipe.<br>
+        <em>Tech: Python, OpenCV, Mediapipe, Pygame</em>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <span><i class="fa-brands fa-python"></i> Python</span>
+      <span><i class="fa-solid fa-code"></i> C, C++</span>
+      <span><i class="fa-solid fa-database"></i> SQL, MongoDB</span>
+      <span><i class="fa-solid fa-brain"></i> ML, DL, DSA</span>
+      <span><i class="fa-solid fa-cubes"></i> OOPS, DBMS, OS</span>
+      <span><i class="fa-solid fa-toolbox"></i> VS Code, PyCharm, Git/GitHub, Jupyter</span>
+      <span><i class="fa-solid fa-layer-group"></i> Numpy, Pandas, Sklearn, Tensorflow</span>
+      <span><i class="fa-solid fa-diagram-project"></i> Streamlit, Flask</span>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <ul class="timeline">
+      <li><i class="fa-solid fa-trophy" style="color:#fbbf24"></i> LeetCode: Max Rating – 1484, Problems – 250+</li>
+      <li><i class="fa-solid fa-trophy" style="color:#fbbf24"></i> CodeChef: Max Rating – 841, Problems – 100+</li>
+      <li><i class="fa-solid fa-medal" style="color:#a3e635"></i> Hackerrank: Java Silver Badge</li>
+      <li><i class="fa-solid fa-lightbulb" style="color:#38bdf8"></i> Hackathons: Top 10 at Aventus 2.0 (National), 3rd Place at Sri Eshwar Hackathon, 2nd Place at Project Expo (ML Domain)</li>
+    </ul>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li><i class="fa-solid fa-certificate" style="color:#38bdf8"></i> Supervised Machine Learning – Coursera</li>
+      <li><i class="fa-solid fa-certificate" style="color:#38bdf8"></i> Deep Learning & Reinforcement Learning – IBM Coursera</li>
+      <li><i class="fa-solid fa-certificate" style="color:#38bdf8"></i> Data Structures in C/C++ – Udemy</li>
+      <li><i class="fa-solid fa-certificate" style="color:#38bdf8"></i> Introduction to NLP</li>
+      <li><i class="fa-solid fa-certificate" style="color:#38bdf8"></i> Introduction to Data Science</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:mohanasundaram.s2022ai-ml@sece.ac.in">mohanasundaram.s2022ai-ml@sece.ac.in</a></p>
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/mohanasundaram-s-2028962a5/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/Unknown0028" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mohanasundaram S | Portfolio</p>
+  </footer>
+
+  <!-- Typed.js animation for hero intro -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed('#typed', {
+      strings: [
+        'Aspiring Software Developer',
+        'AI & ML Enthusiast',
+        'Problem Solver',
+        'Creative Coder',
+        'Open Source Contributor'
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 1200,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>
